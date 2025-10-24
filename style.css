@@ -1204,30 +1204,55 @@ body {
         margin-top: -100px;
     }
 
-    /* Mobile Navigation */
-    .nav__menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--background);
-        flex-direction: column;
-        padding: 100px 40px;
-        gap: 30px;
-        transition: right 0.3s ease;
-        box-shadow: -4px 0 20px rgba(49, 21, 11, 0.1);
+    /* Hero Video - Less Cropped on Mobile */
+    .hero__video {
+        width: 100%;
+        height: auto;
+        min-width: auto;
+        min-height: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 
-    .nav__menu.active {
-        right: 0;
+    /* Mobile Navigation - Show 4 Links */
+    .nav__container {
+        padding: 0 20px;
+    }
+
+    .nav__menu {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+        width: 100%;
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .nav__link {
+        font-size: 11px;
+        padding: 8px 4px;
+        white-space: nowrap;
+    }
+
+    .nav__cta {
+        font-size: 11px;
+        padding: 8px 12px;
     }
 
     .nav__toggle {
-        display: flex;
+        display: none;
     }
 
-    /* Hero */
+    .nav__logo-img {
+        height: 35px;
+    }
+
+    /* Hero - Better fit on mobile */
+    .hero {
+        height: 70vh;
+    }
+
     .hero__title {
         font-size: 48px;
     }
@@ -1263,18 +1288,18 @@ body {
         margin: 40px auto;
     }
 
-    /* Portfolio Carousel */
+    /* Portfolio Carousel - Faster on Mobile */
     .portfolio__item {
         min-width: 280px;
         height: 200px;
     }
 
     .portfolio-row {
-        animation-duration: 50s;
+        animation-duration: 25s;
     }
 
     .portfolio-row--2 {
-        animation-duration: 45s;
+        animation-duration: 20s;
     }
 
     /* Instagram */
