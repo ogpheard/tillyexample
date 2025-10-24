@@ -1216,6 +1216,7 @@ body {
 
     .hero__video--mobile {
         display: block;
+        object-position: center 30%;
     }
 
     /* Mobile Navigation - Show 4 Links */
