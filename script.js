@@ -402,25 +402,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===========================
     // Video Hero Optimization
     // ===========================
-    const heroVideo = document.querySelector('.hero__video');
+    const heroVideos = document.querySelectorAll('.hero__video');
 
-    if (heroVideo) {
-        // Pause video when not in viewport to save resources
-        const videoObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        heroVideo.play();
-                    } else {
-                        heroVideo.pause();
-                    }
-                });
-            },
-            { threshold: 0.25 }
-        );
+    heroVideos.forEach(heroVideo => {
+        if (heroVideo) {
+            // Pause video when not in viewport to save resources
+            const videoObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            heroVideo.play();
+                        } else {
+                            heroVideo.pause();
+                        }
+                    });
+                },
+                { threshold: 0.25 }
+            );
 
-        videoObserver.observe(heroVideo);
-    }
+            videoObserver.observe(heroVideo);
+        }
+    });
 
     // ===========================
     // Preloader (Optional)
