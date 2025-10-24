@@ -1204,14 +1204,15 @@ body {
         margin-top: -100px;
     }
 
-    /* Hero Video - Less Cropped on Mobile */
+    /* Hero Video - Slightly Zoomed Out on Mobile */
     .hero__video {
         width: 100%;
-        height: auto;
-        min-width: auto;
+        height: 100%;
+        min-width: 100%;
         min-height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
+        transform: scale(0.85);
     }
 
     /* Mobile Navigation - Show 4 Links */
@@ -1288,18 +1289,18 @@ body {
         margin: 40px auto;
     }
 
-    /* Portfolio Carousel - Faster on Mobile */
+    /* Portfolio Carousel - Very Fast on Mobile (5 seconds) */
     .portfolio__item {
         min-width: 280px;
         height: 200px;
     }
 
     .portfolio-row {
-        animation-duration: 25s;
+        animation-duration: 5s;
     }
 
     .portfolio-row--2 {
-        animation-duration: 20s;
+        animation-duration: 5s;
     }
 
     /* Instagram */
